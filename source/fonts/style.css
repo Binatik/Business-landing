@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'GT Walsheim Pro';
-    src: local('GT Walsheim Pro Condensed Medium Oblique'), local('GT-Walsheim-Pro-Condensed-Medium-Oblique'),
-        url('GTWalsheimPro-CondensedMediumOblique.woff2') format('woff2'),
-        url('GTWalsheimPro-CondensedMediumOblique.woff') format('woff'),
-        url('GTWalsheimPro-CondensedMediumOblique.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-  }

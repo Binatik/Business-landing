@@ -1,102 +1,138 @@
-$(document).ready(function () {
+ //Слайдер sckick.   Обертка  jq  только для него. 
+ $(document).ready(function () {
+     $('.team__slider').slick({ 
+         dots: true, 
+         arrows: false,
+         infinite: true, 
+         slidesToShow: 3,  
+         slidesToScroll: 3,
 
+         responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 2, 
+                slidesToScroll: 2,
+              }
+            }, 
+            {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 1, 
+                  slidesToScroll: 1,
+                }
+              },
+          ]
+     });
+ });
+ /* ===========================================================================================================================*/
+ //Мобильное меню
+ const burger = document.querySelector('.burger');
+ const navigation = document.querySelector('.header__navigation');
+ const body = document.querySelector('body');
 
-    $('.reviews__slider-comment').slick({
-        dots: true,
-        adaptiveHeight: true,
-        infinite: false,
-        autoplay: true,
-        autoplaySpeed: 16000,
-        draggable: false,
-        touchThreshold: 2,
-        arrows: false,
-    });   
-     
-    VK.Widgets.Group("vk_groups", {mode: 3, width: "auto", color1: '000'}, 191914357);
+ burger.addEventListener("click", function () {
+     burger.classList.toggle('active');
+     navigation.classList.toggle('active');
+     body.classList.toggle('lock');
+ });
 
-    const all = document.querySelectorAll('*');
-    window.line = function line() {
-        all.forEach(element => element.style.outline = 'none');
-        console.log('Функция линий была принудительно вкл. Перезапустите страницу для возврата.');
-    }
+ //Проверка была ли нажата кнопка. 
+ const listLink = document.querySelectorAll('.list__link');
+ listLink.forEach(function (element) {
+     element.addEventListener("click", function () {
+         if (element === element) {
+             listLink.forEach(linkRemoveClass);
+             element.classList.add("link-active");
+             navigation.classList.remove('active');
+             burger.classList.remove('active');
+             body.classList.remove('lock');
+         }
+     });
+ });
 
-    const menuBurger = document.querySelector('.menu-burger');
-    const navigation = document.querySelector('.navigation');
-    const navigationList = document.querySelector('.navigation__list');
-    const body = document.querySelector('body');
-    menuBurger.addEventListener("click", function () {
-        menuBurger.classList.toggle('active');
-        navigation.classList.toggle('active');
-        navigationList.classList.toggle('block_none');
-        body.classList.toggle('lock');
-    });
+ function linkRemoveClass(link) {
+     link.classList.remove("link-active");
+ }
 
-    const headerMenu = document.getElementsByClassName('header-menu')[0];
-    const headerMenu_fixe = document.getElementsByClassName('header-menu_fixe')[0];
-    const offsetTop = headerMenu.offsetTop;
+ /* ===========================================================================================================================*/
+ //Наведение на элемент через  javascript
+ const servicesLink = document.querySelectorAll('.services__link');
+ servicesLink.forEach(function (element) {
+     const servicesItem = element.parentNode; //Node.parentNode MDN   servicesItem -  Наш родитель в текущей области видимости.   
+     const servicesSvg = servicesItem.querySelector('.services__svg');
+     const servicesSubtitle = servicesItem.querySelector('.services__subtitle');
+     const servicesText = servicesItem.querySelector('.services__text');
 
-    const subscription = document.querySelector('.wrapper_fon');
-    const navigationOffsetTop = subscription.offsetTop;
+     element.addEventListener("mouseover", function () {
+         servicesItem.classList.add("services__item_induced");
+         servicesSvg.classList.add("services__svg_induced");
+         servicesSubtitle.classList.add("services__subtitle_induced");
+         servicesText.classList.add("services__text_induced");
+     });
+     element.addEventListener("mouseout", function () {
+         servicesItem.classList.remove("services__item_induced");
+         servicesSvg.classList.remove("services__svg_induced");
+         servicesSubtitle.classList.remove("services__subtitle_induced");
+         servicesText.classList.remove("services__text_induced");
+     });
+ })
 
-    function calcOpacity(scrollTop, distance) {
-        const normalScrollTop = scrollTop - navigationOffsetTop;
-        return Math.max(Math.min(1 - normalScrollTop / distance, 1), 0);
-    }
+ const priceBtn = document.querySelectorAll('.price__btn');
+ priceBtn.forEach(function (element) {
+     const item = element.parentNode; //Node.parentNode MDN   item -  Наш родитель в текущей области видимости.   
 
-    window.addEventListener('scroll', function () {
-        const documentScrollTop = document.body.scrollTop || window.pageYOffset;
-        subscription.style.opacity = calcOpacity(documentScrollTop, 200);
+     element.addEventListener("mouseover", function () {
+         item.classList.add("item__item_induced");
+     });
+     element.addEventListener("mouseout", function () {
+         item.classList.remove("item__item_induced");
+     });
+ })
 
-        if (document.body.scrollTop || window.pageYOffset > offsetTop) {
-            headerMenu.classList.add('header-menu_scroll', 'header-menu_scroll-decoration');
-            headerMenu_fixe.style.height = headerMenu.offsetHeight + 'px';
-            headerMenu.style.opacity = '0.5';
+ /* ===========================================================================================================================*/
+ //Фильтр по нажатию кнопки. 
+ const servicesBtn = document.querySelectorAll('.services__btn-m');
+ const servicesList = document.querySelectorAll('.services__list');
+ servicesBtn.forEach(function (element, i) {
+     element.addEventListener("click", function () {
+         servicesBtn.forEach(elRemoveClass);
+         element.classList.add("btn-active");
+         for (let j = 0; j < servicesList.length; j++) {
+             if (j === i) {
+                 servicesList[j].classList.remove('hidden-item');
+             } else {
+                 servicesList[j].classList.add('hidden-item');
+             }
+         }
+     });
+ });
 
-        } else {
-            headerMenu.classList.remove('header-menu_scroll', 'header-menu_scroll-decoration');
-            headerMenu_fixe.style.height = 0;
-            headerMenu.style.opacity = '1';
-        }
-    }, {
-        passive: true
-    });
+ const worksBtn = document.querySelectorAll('.works__btn-m');
+ const worksGalleries = document.querySelectorAll('.works__gallery');
+ worksBtn.forEach(function (element, i) {
+     element.addEventListener("click", function () {
+         worksBtn.forEach(elRemoveClass);
+         element.classList.add("btn-active");
+         for (let j = 0; j < worksGalleries.length; j++) {
+             if (j === 0 && i === 0) {
+                 worksBtn[worksBtn.length - 1].classList.add("btn-active");
+             }
 
-    let activel = 1;
-    const navigationLink = document.querySelectorAll('.navigation__link');
+             if (j === i) {
+                 worksGalleries[j].classList.remove('hidden-item');
 
-    function elRemoveClass(el) {
-        el.classList.remove("navigationActive");
-    }
-    navigationLink.forEach(function (element) {
-        element.addEventListener("click", function () {
-            if (activel === 1) {
-                navigationLink.forEach(elRemoveClass);
-                element.classList.add("navigationActive");
-            }
-        });
-    });
+             } else if (j === 0 && i == [worksGalleries.length]) {
+                 worksGalleries[j].classList.remove('hidden-item');
+                 worksBtn[worksBtn.length - 5].classList.add("btn-active");
 
-    function main() {
+             } else {
+                 worksGalleries[j].classList.add('hidden-item');
+             }
+         }
+     });
+ });
 
-        class Point {
-            constructor(x, y, sumbol) {
-                this.x = x;
-                this.y = y;
-                this.sumbol = sumbol;
-            }
-
-            init() {
-                console.log(this.x + this.y);
-                console.log(this.sumbol);
-            }
-        }
-
-        let point1 = new Point('X = 32424144', 'Y = -4238694142536', '#');
-        point1.init();
-
-        let point2 = new Point('X = -3414121', 'Y = 93903251124', '@');
-        point2.init();
-    }
-    main();
-
-}); 
+ function elRemoveClass(el) {
+     el.classList.remove("btn-active");
+ }

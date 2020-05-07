@@ -1,348 +1,776 @@
 <!DOCTYPE html>
 <html lang="ru">
-<!-- Функция: outline - требуется для использования клавиатуры.   
-    По умолчанию функция включена:  Если вы хотите выключить функцию - перейдите > F12 > console.   
-    В консоль введите cmd "line()" для отк. линий. -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="shortcut icon" href="image/guarantee.png">
-    <link type="text/css" rel="stylesheet" href="./css/style.min.css">
-    <title>Обналичивание денег</title>
+    <link type="text/css" rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Your</title>
 </head>
 
 <body>
-    <header class="page-header" id="главная">
-        <div class="wrapper">
-            <div class="logo">
-                <h1 class="logo__title title logo__title_decor">обналичивание <strong
-                        class="logo__title logo__title_color">денег</strong>
-                </h1>
-                <a class="logo__link logo__link_effect" href="#" title='Гарантия качества!'>
-                    <svg class="logo__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.998 511" width='80'
-                        height='80'>
-                        <path
-                            d="M511.84 226.781v-.004c-.836-7.976-4.969-15.328-11.336-20.199l-29.14-22.687 10.952-36.141a29.392 29.392 0 00-2.66-23.121 29.388 29.388 0 00-18.691-13.867l-36.66-8.559-4.68-37.351c-1.004-8-5.316-15.305-11.832-20.032-6.523-4.746-14.809-6.593-22.719-5.07l-36.972 7.09-19.473-32.223C320.879 1.793 304.605-3.05 290.785 3.34c-.973.45-1.91.988-2.726 1.566l-32.09 22.352-30.895-21.52a29.388 29.388 0 00-22.804-4.605c-7.883 1.672-14.797 6.594-18.965 13.492L163.84 46.844l-36.977-7.094c-7.918-1.516-16.195.332-22.707 5.066A29.358 29.358 0 0092.32 64.852l-4.68 37.355-38.773 9.05-1.82.595-.672.293c-14.086 6.16-21.133 21.136-16.75 35.605l10.95 36.14-30.391 23.641-1.762 1.531-.496.543c-10.2 11.141-10.598 27.993-.95 39.258l23.794 28.453-19.286 34.997-.77 1.75-.222.652c-4.808 14.37 1.742 29.988 15.235 36.32l34.078 15.992-3.192 37.508a29.365 29.365 0 007.41 22.063 29.385 29.385 0 0021.168 9.68l37.637.75 12.344 35.558a29.345 29.345 0 0015.738 17.14c7.36 3.278 15.84 3.364 23.278.235l34.69-14.621 27.231 29.058 1.426 1.27.55.41c5.38 3.973 11.665 5.918 17.892 5.918 7.878 0 15.66-3.117 21.351-9.191l25.742-27.465 34.696 14.625a29.381 29.381 0 0023.257-.235 29.356 29.356 0 0015.747-17.14l12.347-35.563 39.813-.793 1.89-.207.68-.136c14.844-3.028 25.09-16.508 23.828-31.352l-3.187-37.512 34.082-15.992a29.37 29.37 0 0015.398-17.45 29.377 29.377 0 00-2.203-23.167l-18.242-33.102 23.797-28.453a29.367 29.367 0 006.867-22.082zM257.563 383.773c-70.301 0-127.497-57.195-127.497-127.496 0-70.304 57.196-127.496 127.496-127.496 70.305 0 127.5 57.192 127.5 127.496 0 70.301-57.199 127.496-127.5 127.496zm0 0" />
-                        <path fill='#000'
-                            d="M257.563 158.8c-53.747 0-97.477 43.727-97.477 97.477 0 53.746 43.73 97.473 97.476 97.473 53.75 0 97.477-43.727 97.477-97.473 0-53.75-43.726-97.476-97.476-97.476zm57.875 79.118l-69.836 69.832a14.947 14.947 0 01-10.614 4.398c-3.84 0-7.683-1.464-10.613-4.398l-26.684-26.684c-5.863-5.863-5.863-15.367 0-21.23 5.86-5.86 15.364-5.86 21.227 0l16.074 16.074 59.219-59.219c5.86-5.863 15.367-5.863 21.226 0 5.864 5.86 5.864 15.364 0 21.227zm0 0" />
+    <div class="version"></div>
+    <header class="header center-items">
+        <div class="header__body wrapper">
+            <div class="header__menu">
+                <a class="logo" href="">
+                    <h1 class="logo__title">Your Logo</h1>
+                </a>
+                <div class="burger"><span></span></div>
+                <nav class="header__navigation">
+                    <ul class="list">
+                        <li class="list__items">
+                            <a class="list__link" href="#">Home</a>
+                        </li>
+                        <li class="list__items">
+                            <a class="list__link" href="#about">About</a>
+                        </li>
+                        <li class="list__items">
+                            <a class="list__link" href="#servicing">Servicing</a>
+                        </li>
+                        <li class="list__items">
+                            <a class="list__link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="list__items">
+                            <a class="list__link" href="#blog">Blog</a>
+                        </li>
+                        <li class="list__items">
+                            <a class="list__link" href="#">Contact us</a>
+                        </li>
+                        <li class="list__items list__items_geometry">
+                            <img class="list__img" src="image/research.svg" alt="search">
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="maim">
+        <section class="preview center-items">
+            <div class="preview__body wrapper">
+                <div class="preview__top">
+                    <h2 class="preview__title">Web development project</h2>
+                    <p class="preview__desc">Very suitable to support all web development projects</p>
+                </div>
+                <div class="preview__bottom">
+                    <a class="preview__link link-btn uppercase" href="#">OUR SERVICES</a>
+                    <a class="preview__link link-btn uppercase" href="#">HIRE IS NOW</a>
+                </div>
+                <a class="preview__link-arrow tiny-screen " href="#about">
+                    <svg class="preview__link-arrow-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+                        width='30' height='30'>
+                        <path d="M225.813 48.907L128 146.72 30.187 48.907 0 79.093l128 128 128-128z" />
                     </svg>
                 </a>
             </div>
-        </div>
-        <div class="header-menu">
-            <div class="wrapper">
-                <div class="header-menu__body">
-                    <a class="number__link menu-link" href="tel:+79645729848" title="Остались вопросы, звоните нам!">+7
-                        (964)572-98-48</a>
-                    <div class="menu-burger"><span></span></div>
-                    <nav class="navigation">
-                        <ul class="navigation__list list">
-                            <li class="navigation__item"><a class="navigation__link navigation__link_effect menu-link "
-                                    href="#главная" title="Вернуться на главную.">главная</a>
-                            </li>
-                            <li class="navigation__item"><a class="navigation__link navigation__link_effect menu-link"
-                                    href="#возможности" title="Узнать возможности компании.">возможности</a>
-                            </li>
-                            <li class="navigation__item"><a class="navigation__link navigation__link_effect menu-link"
-                                    href="#схема" title="Посмотреть, как работает компания по пунктам.">схема</a>
-                            </li>
-                            <li class="navigation__item"><a class="navigation__link navigation__link_effect menu-link"
-                                    href="#компания" title="Узнать о компании больше.">компания</a>
-                            </li>
-                            <li class="navigation__item"><a class="navigation__link navigation__link_effect menu-link"
-                                    href="#отзывы" title="Посмотреть реальные отзывы клиентов">отзывы</a>
-                            </li>
-                            <li class="navigation__item"><a class="navigation__link navigation__link_effect menu-link"
-                                    href="#компания"
-                                    title="Связаться с модераторами, если остались вопросы.">контакты</a>
-                            </li>
-                        </ul>
-                    </nav>
+            <a class="preview__link-arrow large-screen" href="#about">
+                <svg class="preview__link-arrow-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width='30'
+                    height='30'>
+                    <path d="M225.813 48.907L128 146.72 30.187 48.907 0 79.093l128 128 128-128z" />
+                </svg>
+            </a>
+        </section>
+        <section class="about center-items" id="about">
+            <div class="about__body wrapper">
+                <div class="about__top">
+                    <div class="summary">
+                        <h2 class="summary__title">About Us</h2>
+                        <p class="summary__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                    </div>
+                </div>
+                <div class="about__bottom row-list lock-wrap ">
+                    <div class="about__item">
+                        <svg class="about__svg" viewBox="0 0 128 128" height="64" width="64"
+                            xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
+                            <path
+                                d="M113.7 23.7l-.8-.9A63.8 63.8 0 0065 0H63a63.8 63.8 0 00-48 23 6.2 6.2 0 00-.5.6 63.8 63.8 0 000 80.8 6.2 6.2 0 00.4.6 63.8 63.8 0 0048.2 23h1.8a63.8 63.8 0 0048-22.8l.8-.9a63.8 63.8 0 000-80.6zM99.5 62.3a106.2 106.2 0 00-4-28 69.6 69.6 0 0016.1-7.6 60.2 60.2 0 0112.9 35.5zM65.7 3.5c10.7 1 20 12.1 25.4 28.3a100.6 100.6 0 01-25.3 3.6zm-3.5 31.9A100.6 100.6 0 0137 31.9C42.3 15.7 51.6 4.7 62.3 3.6zm0 3.5v23.3H32a104.4 104.4 0 013.9-27A104.2 104.2 0 0062.3 39zm0 26.8V89A104.2 104.2 0 0036 92.8a104.4 104.4 0 01-3.9-27zm0 26.7v32c-10.6-1.2-20-12.2-25.3-28.4a100.6 100.6 0 0125.4-3.6zm3.5 0a100.6 100.6 0 0125.4 3.6c-5.4 16.2-14.7 27.2-25.3 28.3zm0-3.5V65.7H96a104.5 104.5 0 01-3.9 27A103.3 103.3 0 0065.8 89zm0-26.8V39a103.3 103.3 0 0026.4-3.8 104.5 104.5 0 013.9 27zM109.3 24a66.2 66.2 0 01-15 6.9A54 54 0 0078 5.1 60.6 60.6 0 01109.3 24zM50.1 5A54 54 0 0033.6 31a67 67 0 01-15-6.9A60.5 60.5 0 0150.1 5.1zM16.4 26.7a69.6 69.6 0 0016.2 7.5 106 106 0 00-4 28h-25a60.2 60.2 0 0112.8-35.5zm12.1 39a106 106 0 004 28 69.2 69.2 0 00-16.1 7.6A60.2 60.2 0 013.5 65.8zM18.6 104a67 67 0 0115-6.9 54 54 0 0016.5 25.8A60.5 60.5 0 0118.6 104zM78 122.9A54 54 0 0094.4 97a66.2 66.2 0 0115 7 60.6 60.6 0 01-31.5 18.8zm33.7-21.6a69.6 69.6 0 00-16.2-7.5 106.2 106.2 0 004-28h25a60.2 60.2 0 01-12.8 35.5z" />
+                        </svg>
+                        <h3 class="about__subtitle subtitle">Awesome Icons</h3>
+                        <p class="about__text text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod
+                            tempor</p>
+                    </div>
+                    <div class="about__item">
+                        <svg class="about__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470.9 470.9" height="64"
+                            width="64">
+                            <path
+                                d="M390 67c0-3-3-6-6-6-4 0-6 3-6 6v27l-4-4c-80-78-208-76-287 4a6 6 0 109 8c74-75 195-77 270-3l4 4h-27c-3 0-6 3-6 6s3 6 6 6l42-1c3 0 6-2 5-6V67zM378 369c-3-3-7-3-9 0a190 190 0 01-270 3l-4-4h27c3 0 6-3 6-6 0-4-3-6-6-6H80c-3 0-6 3-5 6v42c0 3 3 6 6 6s6-3 6-7v-26l4 4c38 37 88 57 141 57h3c54 0 105-22 143-61 2-2 2-6 0-8zM175 294c-20-17-41-28-49-32v-28c5-4 7-10 7-16v-36c0-20-17-37-38-37h-7c-21 0-38 17-38 37v36c0 6 3 12 7 16v28c-8 4-29 16-49 32-5 4-8 11-8 18v24c0 3 3 6 6 6s6-3 6-6v-24c0-4 2-7 4-9 21-17 45-29 49-31 3-2 4-4 4-7v-34c0-2-1-4-3-5-2-2-4-5-4-8v-36c0-14 12-25 26-25h8c14 0 25 11 25 25v36c0 3-1 6-4 8-2 1-3 3-3 5v34c0 3 2 5 4 7 5 2 28 13 49 31 3 2 4 5 4 8v25c0 3 3 6 6 6s6-3 6-6v-25c0-6-3-13-8-17zM463 294c-20-16-41-28-49-32v-28c4-4 7-10 7-16v-36c0-20-17-37-38-37h-7c-21 0-38 17-38 37v36c0 6 2 12 7 16v28c-8 4-29 16-49 32-5 4-8 11-8 18v24c0 3 2 6 6 6s6-3 6-6v-24c0-4 1-7 4-9 21-17 44-29 49-31 2-2 4-4 4-7v-34c0-2-1-4-3-5-3-2-4-5-4-8v-36c0-14 11-25 25-25h8c14 0 26 11 26 25v36c0 3-2 6-5 8l-2 5v34c0 3 1 5 4 7 4 2 27 13 49 31 2 2 4 5 4 8v25c0 3 3 6 6 6s6-3 6-6v-24c0-7-3-14-8-18z" />
+                        </svg>
+                        <h3 class="about__subtitle subtitle">One Page</h3>
+                        <p class="about__text text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod
+                            tempor</p>
+                    </div>
+                    <div class="about__item">
+                        <svg class="about__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.8 486.8" height="64"
+                            width="64">
+                            <path d="M316 90a54 54 0 100 108 54 54 0 000-108zm0 96a42 42 0 110-84 42 42 0 010 84z" />
+                            <path
+                                d="M442 116h-13c-3-11-7-22-14-32l10-10c7-7 7-18 0-25l-14-14a18 18 0 00-25 0l-9 10c-11-7-22-11-33-14V18c0-10-8-18-18-18h-20c-9 0-17 8-17 18v13c-12 3-23 7-33 14l-10-10a18 18 0 00-25 0l-14 14c-7 7-7 18 0 25l10 10c-6 10-11 21-14 32h-13c-10 0-18 8-18 18v20c0 10 8 17 18 17h13c3 12 8 23 14 33l-10 10c-7 7-7 18 0 25l14 14a18 18 0 0025 0l10-10c10 6 21 11 32 14v13c0 10 8 18 18 18h20c10 0 18-8 18-18v-13c11-3 22-8 32-14l10 10a18 18 0 0025 0l14-14c7-7 7-18 0-25l-10-10c6-10 11-21 14-33h13c10 1 18-7 18-17v-20c0-10-8-18-18-18zm6 38c0 3-3 6-6 6h-18c-3 0-5 2-6 4-2 14-8 26-15 38-2 2-1 5 1 7l12 13c3 2 3 6 0 8l-14 14-4 2-4-2-12-13c-2-2-6-2-8 0-11 7-24 13-38 15-2 1-4 3-4 6v18c0 3-3 6-6 6h-20c-3 0-5-3-5-6v-18c0-3-2-5-5-6-14-2-26-8-38-15l-3-1c-2 0-3 0-4 2l-13 12-4 2-4-2-14-14c-2-2-2-5 0-8l13-12c2-2 2-6 1-8-8-11-13-24-16-38-1-2-3-4-6-4h-18c-3 0-6-3-6-6v-20c0-3 3-5 6-5h18c3 0 5-2 6-5 3-14 8-26 16-38 1-2 1-5-1-7l-13-13c-2-2-2-6 0-8l14-14 4-2 4 2 13 13c2 2 5 2 7 0 12-7 24-13 38-15 3-1 5-3 5-6V18c0-4 2-6 5-6h20c3 0 6 3 6 6v18c0 3 2 5 5 6 13 2 26 8 37 15 2 2 6 1 8-1l12-12 4-2 4 2 14 14c2 2 2 5 0 8l-13 12c-2 2-2 6 0 8 7 11 13 24 15 38 1 2 3 4 6 4h18c4 0 6 3 6 6v20z" />
+                            <path
+                                d="M377 279c-3-1-7 1-8 4-8 24-22 46-41 64l-2 4v124H152v-40a6 6 0 00-7-6l-45 7c-14 0-26-12-26-27v-58c0-4-3-6-6-6H53c-6 0-11-2-13-6-2-3-2-8 1-14l32-61 1-2v-27A151 151 0 01177 92c3-1 5-4 4-7-2-3-5-5-8-4l-17 7a163 163 0 00-94 148v24l-31 60c-5 9-6 19-1 26 4 7 12 11 23 11h9v52c0 21 17 39 39 39h1l38-6v39c0 3 3 6 6 6h186c3 0 6-3 6-6V354c20-19 34-42 43-68 1-3-1-6-4-7z" />
+                        </svg>
+                        <h3 class="about__subtitle subtitle">Fully Responsive</h3>
+                        <p class="about__text text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod
+                            tempor</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="header-menu header-menu_fixe"></div>
-    </header>
-    <main class='page-main'>
-        <div class="wrapper wrapper_fon wrapper_line">
-            <script type="text/javascript" src="https://vk.com/js/api/openapi.js?167"></script>
+        </section>
+        <section class="services center-items" id="servicing">
+            <div class="services__body wrapper">
+                <div class="services__top">
+                    <div class="summary">
+                        <h2 class="summary__title">Our Services</h2>
+                        <p class="summary__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                    </div>
+                </div>
+                <div class="services__bottom row-list">
+                    <div class="services__menu row-list">
+                        <button class="services__btn-m  link-btn uppercase btn-active">all</button>
+                        <button class="services__btn-m  link-btn uppercase">1</button>
+                        <button class="services__btn-m  link-btn uppercase">2</button>
+                    </div>
+                    <div class="services__list row-list">
+                        <div class="services__item">
+                            <svg class="services__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width='56'
+                                height='62'>
+                                <path
+                                    d="M35.5 31a1 1 0 00-1 1v14h-30V8h30v14a1 1 0 102 0V4.4c0-2.4-2-4.4-4.4-4.4H6.9C4.5 0 2.5 2 2.5 4.4v51.2c0 2.4 2 4.4 4.4 4.4h25.2c2.4 0 4.4-2 4.4-4.4V32c0-.6-.4-1-1-1zM6.9 2h25.2c1.3 0 2.4 1 2.4 2.4V6h-30V4.4c0-1.3 1-2.4 2.4-2.4zm25.2 56H6.9c-1.3 0-2.4-1-2.4-2.4V48h30v7.6c0 1.3-1 2.4-2.4 2.4z" />
+                                <path
+                                    d="M19.5 49a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM15.5 5h4a1 1 0 100-2h-4a1 1 0 100 2zM22.5 5h1a1 1 0 100-2h-1a1 1 0 100 2zM56.5 26H20.9l10.3-10.3a1 1 0 10-1.4-1.4l-12 12a1 1 0 000 1.4l12 12a1 1 0 001.4 0c.4-.4.4-1 0-1.4L21 28h35.6a1 1 0 100-2z" />
+                            </svg>
+                            <h3 class="services__subtitle subtitle">Research</h3>
+                            <p class="services__text text">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui
+                                blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                            <a class="services__link link-btn uppercase" href="">READ MORE</a>
+                        </div>
+                        <div class="services__item">
+                            <svg class="services__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width='56'
+                                height='62'>
+                                <path
+                                    d="M35.5 31a1 1 0 00-1 1v14h-30V8h30v14a1 1 0 102 0V4.4c0-2.4-2-4.4-4.4-4.4H6.9C4.5 0 2.5 2 2.5 4.4v51.2c0 2.4 2 4.4 4.4 4.4h25.2c2.4 0 4.4-2 4.4-4.4V32c0-.6-.4-1-1-1zM6.9 2h25.2c1.3 0 2.4 1 2.4 2.4V6h-30V4.4c0-1.3 1-2.4 2.4-2.4zm25.2 56H6.9c-1.3 0-2.4-1-2.4-2.4V48h30v7.6c0 1.3-1 2.4-2.4 2.4z" />
+                                <path
+                                    d="M19.5 49a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM15.5 5h4a1 1 0 100-2h-4a1 1 0 100 2zM22.5 5h1a1 1 0 100-2h-1a1 1 0 100 2zM56.5 26H20.9l10.3-10.3a1 1 0 10-1.4-1.4l-12 12a1 1 0 000 1.4l12 12a1 1 0 001.4 0c.4-.4.4-1 0-1.4L21 28h35.6a1 1 0 100-2z" />
+                            </svg>
+                            <h3 class="services__subtitle subtitle">Research</h3>
+                            <p class="services__text text">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui
+                                blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                            <a class="services__link link-btn uppercase" href="">READ MORE</a>
+                        </div>
+                        <div class="services__item">
+                            <svg class="services__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width='56'
+                                height='62'>
+                                <path
+                                    d="M35.5 31a1 1 0 00-1 1v14h-30V8h30v14a1 1 0 102 0V4.4c0-2.4-2-4.4-4.4-4.4H6.9C4.5 0 2.5 2 2.5 4.4v51.2c0 2.4 2 4.4 4.4 4.4h25.2c2.4 0 4.4-2 4.4-4.4V32c0-.6-.4-1-1-1zM6.9 2h25.2c1.3 0 2.4 1 2.4 2.4V6h-30V4.4c0-1.3 1-2.4 2.4-2.4zm25.2 56H6.9c-1.3 0-2.4-1-2.4-2.4V48h30v7.6c0 1.3-1 2.4-2.4 2.4z" />
+                                <path
+                                    d="M19.5 49a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM15.5 5h4a1 1 0 100-2h-4a1 1 0 100 2zM22.5 5h1a1 1 0 100-2h-1a1 1 0 100 2zM56.5 26H20.9l10.3-10.3a1 1 0 10-1.4-1.4l-12 12a1 1 0 000 1.4l12 12a1 1 0 001.4 0c.4-.4.4-1 0-1.4L21 28h35.6a1 1 0 100-2z" />
+                            </svg>
+                            <h3 class="services__subtitle subtitle">Research</h3>
+                            <p class="services__text text">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui
+                                blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                            <a class="services__link link-btn uppercase" href="">READ MORE</a>
+                        </div>
+                        <div class="services__item">
+                            <svg class="services__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width='56'
+                                height='62'>
+                                <path
+                                    d="M35.5 31a1 1 0 00-1 1v14h-30V8h30v14a1 1 0 102 0V4.4c0-2.4-2-4.4-4.4-4.4H6.9C4.5 0 2.5 2 2.5 4.4v51.2c0 2.4 2 4.4 4.4 4.4h25.2c2.4 0 4.4-2 4.4-4.4V32c0-.6-.4-1-1-1zM6.9 2h25.2c1.3 0 2.4 1 2.4 2.4V6h-30V4.4c0-1.3 1-2.4 2.4-2.4zm25.2 56H6.9c-1.3 0-2.4-1-2.4-2.4V48h30v7.6c0 1.3-1 2.4-2.4 2.4z" />
+                                <path
+                                    d="M19.5 49a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM15.5 5h4a1 1 0 100-2h-4a1 1 0 100 2zM22.5 5h1a1 1 0 100-2h-1a1 1 0 100 2zM56.5 26H20.9l10.3-10.3a1 1 0 10-1.4-1.4l-12 12a1 1 0 000 1.4l12 12a1 1 0 001.4 0c.4-.4.4-1 0-1.4L21 28h35.6a1 1 0 100-2z" />
+                            </svg>
+                            <h3 class="services__subtitle subtitle">Research</h3>
+                            <p class="services__text text">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui
+                                blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                            <a class="services__link link-btn uppercase" href="">READ MORE</a>
+                        </div>
+                        <div class="services__item">
+                            <svg class="services__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width='56'
+                                height='62'>
+                                <path
+                                    d="M35.5 31a1 1 0 00-1 1v14h-30V8h30v14a1 1 0 102 0V4.4c0-2.4-2-4.4-4.4-4.4H6.9C4.5 0 2.5 2 2.5 4.4v51.2c0 2.4 2 4.4 4.4 4.4h25.2c2.4 0 4.4-2 4.4-4.4V32c0-.6-.4-1-1-1zM6.9 2h25.2c1.3 0 2.4 1 2.4 2.4V6h-30V4.4c0-1.3 1-2.4 2.4-2.4zm25.2 56H6.9c-1.3 0-2.4-1-2.4-2.4V48h30v7.6c0 1.3-1 2.4-2.4 2.4z" />
+                                <path
+                                    d="M19.5 49a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM15.5 5h4a1 1 0 100-2h-4a1 1 0 100 2zM22.5 5h1a1 1 0 100-2h-1a1 1 0 100 2zM56.5 26H20.9l10.3-10.3a1 1 0 10-1.4-1.4l-12 12a1 1 0 000 1.4l12 12a1 1 0 001.4 0c.4-.4.4-1 0-1.4L21 28h35.6a1 1 0 100-2z" />
+                            </svg>
+                            <h3 class="services__subtitle subtitle">Research</h3>
+                            <p class="services__text text">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui
+                                blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                            <a class="services__link link-btn uppercase" href="">READ MORE</a>
+                        </div>
+                        <div class="services__item">
+                            <svg class="services__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width='56'
+                                height='62'>
+                                <path
+                                    d="M35.5 31a1 1 0 00-1 1v14h-30V8h30v14a1 1 0 102 0V4.4c0-2.4-2-4.4-4.4-4.4H6.9C4.5 0 2.5 2 2.5 4.4v51.2c0 2.4 2 4.4 4.4 4.4h25.2c2.4 0 4.4-2 4.4-4.4V32c0-.6-.4-1-1-1zM6.9 2h25.2c1.3 0 2.4 1 2.4 2.4V6h-30V4.4c0-1.3 1-2.4 2.4-2.4zm25.2 56H6.9c-1.3 0-2.4-1-2.4-2.4V48h30v7.6c0 1.3-1 2.4-2.4 2.4z" />
+                                <path
+                                    d="M19.5 49a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM15.5 5h4a1 1 0 100-2h-4a1 1 0 100 2zM22.5 5h1a1 1 0 100-2h-1a1 1 0 100 2zM56.5 26H20.9l10.3-10.3a1 1 0 10-1.4-1.4l-12 12a1 1 0 000 1.4l12 12a1 1 0 001.4 0c.4-.4.4-1 0-1.4L21 28h35.6a1 1 0 100-2z" />
+                            </svg>
+                            <h3 class="services__subtitle subtitle">Research</h3>
+                            <p class="services__text text">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui
+                                blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                            <a class="services__link link-btn uppercase" href="">READ MORE</a>
+                        </div>
+                        <div class="services__item hidden-item-services"></div>
+                        <div class="services__item hidden-item-services"></div>
+                    </div>
+                    <div class="services__list row-list hidden-item">
+                        <div class="services__item">
+                            <svg class="services__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width='56'
+                                height='62'>
+                                <path
+                                    d="M35.5 31a1 1 0 00-1 1v14h-30V8h30v14a1 1 0 102 0V4.4c0-2.4-2-4.4-4.4-4.4H6.9C4.5 0 2.5 2 2.5 4.4v51.2c0 2.4 2 4.4 4.4 4.4h25.2c2.4 0 4.4-2 4.4-4.4V32c0-.6-.4-1-1-1zM6.9 2h25.2c1.3 0 2.4 1 2.4 2.4V6h-30V4.4c0-1.3 1-2.4 2.4-2.4zm25.2 56H6.9c-1.3 0-2.4-1-2.4-2.4V48h30v7.6c0 1.3-1 2.4-2.4 2.4z" />
+                                <path
+                                    d="M19.5 49a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM15.5 5h4a1 1 0 100-2h-4a1 1 0 100 2zM22.5 5h1a1 1 0 100-2h-1a1 1 0 100 2zM56.5 26H20.9l10.3-10.3a1 1 0 10-1.4-1.4l-12 12a1 1 0 000 1.4l12 12a1 1 0 001.4 0c.4-.4.4-1 0-1.4L21 28h35.6a1 1 0 100-2z" />
+                            </svg>
+                            <h3 class="services__subtitle subtitle">Research</h3>
+                            <p class="services__text text">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui
+                                blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                            <a class="services__link link-btn uppercase" href="">READ MORE</a>
+                        </div>
+                        <div class="services__item">
+                            <svg class="services__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width='56'
+                                height='62'>
+                                <path
+                                    d="M35.5 31a1 1 0 00-1 1v14h-30V8h30v14a1 1 0 102 0V4.4c0-2.4-2-4.4-4.4-4.4H6.9C4.5 0 2.5 2 2.5 4.4v51.2c0 2.4 2 4.4 4.4 4.4h25.2c2.4 0 4.4-2 4.4-4.4V32c0-.6-.4-1-1-1zM6.9 2h25.2c1.3 0 2.4 1 2.4 2.4V6h-30V4.4c0-1.3 1-2.4 2.4-2.4zm25.2 56H6.9c-1.3 0-2.4-1-2.4-2.4V48h30v7.6c0 1.3-1 2.4-2.4 2.4z" />
+                                <path
+                                    d="M19.5 49a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM15.5 5h4a1 1 0 100-2h-4a1 1 0 100 2zM22.5 5h1a1 1 0 100-2h-1a1 1 0 100 2zM56.5 26H20.9l10.3-10.3a1 1 0 10-1.4-1.4l-12 12a1 1 0 000 1.4l12 12a1 1 0 001.4 0c.4-.4.4-1 0-1.4L21 28h35.6a1 1 0 100-2z" />
+                            </svg>
+                            <h3 class="services__subtitle subtitle">Research</h3>
+                            <p class="services__text text">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui
+                                blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                            <a class="services__link link-btn uppercase" href="">READ MORE</a>
+                        </div>
+                        <div class="services__item">
+                            <svg class="services__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width='56'
+                                height='62'>
+                                <path
+                                    d="M35.5 31a1 1 0 00-1 1v14h-30V8h30v14a1 1 0 102 0V4.4c0-2.4-2-4.4-4.4-4.4H6.9C4.5 0 2.5 2 2.5 4.4v51.2c0 2.4 2 4.4 4.4 4.4h25.2c2.4 0 4.4-2 4.4-4.4V32c0-.6-.4-1-1-1zM6.9 2h25.2c1.3 0 2.4 1 2.4 2.4V6h-30V4.4c0-1.3 1-2.4 2.4-2.4zm25.2 56H6.9c-1.3 0-2.4-1-2.4-2.4V48h30v7.6c0 1.3-1 2.4-2.4 2.4z" />
+                                <path
+                                    d="M19.5 49a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM15.5 5h4a1 1 0 100-2h-4a1 1 0 100 2zM22.5 5h1a1 1 0 100-2h-1a1 1 0 100 2zM56.5 26H20.9l10.3-10.3a1 1 0 10-1.4-1.4l-12 12a1 1 0 000 1.4l12 12a1 1 0 001.4 0c.4-.4.4-1 0-1.4L21 28h35.6a1 1 0 100-2z" />
+                            </svg>
+                            <h3 class="services__subtitle subtitle">Research</h3>
+                            <p class="services__text text">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui
+                                blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                            <a class="services__link link-btn uppercase" href="">READ MORE</a>
+                        </div>
+                        <div class="services__item hidden-item-services"></div>
+                        <div class="services__item hidden-item-services"></div>
+                    </div>
+                    <div class="services__list row-list hidden-item">
+                        <div class="services__item">
+                            <svg class="services__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width='56'
+                                height='62'>
+                                <path
+                                    d="M35.5 31a1 1 0 00-1 1v14h-30V8h30v14a1 1 0 102 0V4.4c0-2.4-2-4.4-4.4-4.4H6.9C4.5 0 2.5 2 2.5 4.4v51.2c0 2.4 2 4.4 4.4 4.4h25.2c2.4 0 4.4-2 4.4-4.4V32c0-.6-.4-1-1-1zM6.9 2h25.2c1.3 0 2.4 1 2.4 2.4V6h-30V4.4c0-1.3 1-2.4 2.4-2.4zm25.2 56H6.9c-1.3 0-2.4-1-2.4-2.4V48h30v7.6c0 1.3-1 2.4-2.4 2.4z" />
+                                <path
+                                    d="M19.5 49a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM15.5 5h4a1 1 0 100-2h-4a1 1 0 100 2zM22.5 5h1a1 1 0 100-2h-1a1 1 0 100 2zM56.5 26H20.9l10.3-10.3a1 1 0 10-1.4-1.4l-12 12a1 1 0 000 1.4l12 12a1 1 0 001.4 0c.4-.4.4-1 0-1.4L21 28h35.6a1 1 0 100-2z" />
+                            </svg>
+                            <h3 class="services__subtitle subtitle">Research</h3>
+                            <p class="services__text text">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui
+                                blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                            <a class="services__link link-btn uppercase" href="">READ MORE</a>
+                        </div>
+                        <div class="services__item">
+                            <svg class="services__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width='56'
+                                height='62'>
+                                <path
+                                    d="M35.5 31a1 1 0 00-1 1v14h-30V8h30v14a1 1 0 102 0V4.4c0-2.4-2-4.4-4.4-4.4H6.9C4.5 0 2.5 2 2.5 4.4v51.2c0 2.4 2 4.4 4.4 4.4h25.2c2.4 0 4.4-2 4.4-4.4V32c0-.6-.4-1-1-1zM6.9 2h25.2c1.3 0 2.4 1 2.4 2.4V6h-30V4.4c0-1.3 1-2.4 2.4-2.4zm25.2 56H6.9c-1.3 0-2.4-1-2.4-2.4V48h30v7.6c0 1.3-1 2.4-2.4 2.4z" />
+                                <path
+                                    d="M19.5 49a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM15.5 5h4a1 1 0 100-2h-4a1 1 0 100 2zM22.5 5h1a1 1 0 100-2h-1a1 1 0 100 2zM56.5 26H20.9l10.3-10.3a1 1 0 10-1.4-1.4l-12 12a1 1 0 000 1.4l12 12a1 1 0 001.4 0c.4-.4.4-1 0-1.4L21 28h35.6a1 1 0 100-2z" />
+                            </svg>
+                            <h3 class="services__subtitle subtitle">Research</h3>
+                            <p class="services__text text">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui
+                                blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                            <a class="services__link link-btn uppercase" href="">READ MORE</a>
+                        </div>
+                        <div class="services__item">
+                            <svg class="services__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width='56'
+                                height='62'>
+                                <path
+                                    d="M35.5 31a1 1 0 00-1 1v14h-30V8h30v14a1 1 0 102 0V4.4c0-2.4-2-4.4-4.4-4.4H6.9C4.5 0 2.5 2 2.5 4.4v51.2c0 2.4 2 4.4 4.4 4.4h25.2c2.4 0 4.4-2 4.4-4.4V32c0-.6-.4-1-1-1zM6.9 2h25.2c1.3 0 2.4 1 2.4 2.4V6h-30V4.4c0-1.3 1-2.4 2.4-2.4zm25.2 56H6.9c-1.3 0-2.4-1-2.4-2.4V48h30v7.6c0 1.3-1 2.4-2.4 2.4z" />
+                                <path
+                                    d="M19.5 49a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM15.5 5h4a1 1 0 100-2h-4a1 1 0 100 2zM22.5 5h1a1 1 0 100-2h-1a1 1 0 100 2zM56.5 26H20.9l10.3-10.3a1 1 0 10-1.4-1.4l-12 12a1 1 0 000 1.4l12 12a1 1 0 001.4 0c.4-.4.4-1 0-1.4L21 28h35.6a1 1 0 100-2z" />
+                            </svg>
+                            <h3 class="services__subtitle subtitle">Research</h3>
+                            <p class="services__text text">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui
+                                blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+                            <a class="services__link link-btn uppercase" href="">READ MORE</a>
+                        </div>
+                        <div class="services__item hidden-item-services"></div>
+                        <div class="services__item hidden-item-services"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="works center-items" id="portfolio">
+            <div class="works__body wrapper">
+                <div class="works__top">
+                    <div class="summary">
+                        <h2 class="summary__title">Latest Works</h2>
+                        <p class="summary__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                    </div>
+                    <div class="works__bottom">
+                        <div class="works__menu row-list">
+                            <button class="works__btn-m  link-btn uppercase btn-active">ALL</button>
+                            <button class="works__btn-m  link-btn uppercase">WEB DESIGN</button>
+                            <button class="works__btn-m  link-btn uppercase">UI/UX DESIGN</button>
+                            <button class="works__btn-m  link-btn uppercase">MOCKUPS</button>
+                        </div>
+                        <div class="works__gallery row-list">
+                            <a class="works__gallery-container-l" href="https://binatik.github.io/GnomomixSwallowTEST/">
+                                <img class="works__gallery-img" src="image/gallery/item__4.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__2.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__3.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__1.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__2.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__3.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <div class="works__gallery-container-l hidden-item-services"></div>
+                            <div class="works__gallery-container-l hidden-item-services"></div>
+                        </div>
+                        <div class="works__gallery row-list hidden-item">
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__1.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__2.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__3.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <div class="works__gallery-container-l hidden-item-services"></div>
+                            <div class="works__gallery-container-l hidden-item-services"></div>
+                        </div>
+                        <div class="works__gallery row-list hidden-item">
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__3.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__2.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__1.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <div class="works__gallery-container-l hidden-item-services"></div>
+                            <div class="works__gallery-container-l hidden-item-services"></div>
+                        </div>
+                        <div class="works__gallery row-list hidden-item">
 
-            <div class="subscription">
-                <h2 class="number">01</h2>
-                <h3 class="subscription__title subscription__title_decor title title-topic">Подпишись и будь всегда с
-                    нами!</h3>
-                <div class="subscription__fon-link border-line">
-                    <div class="vk_Wrapper">
-                        <div id="vk_groups"></div>
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__2.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__1.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <a class="works__gallery-container-l" href="">
+                                <img class="works__gallery-img" src="image/gallery/item__3.png" alt="item">
+                                <div class="works__gallery-aside">
+                                    <h3 class="works__gallery-subtitle">Hand Watch</h3>
+                                    <p class="works__gallery-text">ui/ux design</p>
+                                </div>
+                            </a>
+                            <div class="works__gallery-container-l hidden-item-services"></div>
+                            <div class="works__gallery-container-l hidden-item-services"></div>
+                        </div>
+                        <div class="works__menu-b">
+                            <button
+                                class="works__btn-m works__btn-m_centered works__btn-m_enlarged btn-active  link-btn uppercase">view
+                                all</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="wrapper wrapper_fon-page">
-            <section class="services" id="возможности">
-                <h2 class="number">02</h2>
-                <h2 class="services__title title-topic">услуги</h2>
-                <div class="services__body">
-                    <div class="services__item line">
-                        <h3 class="services__subtitle">оптимизация ндс</h3>
-                        <p class="services-text">тут будет text</p>
-                    </div>
-                    <div class="services__item line">
-                        <h3 class="services__subtitle">тарифы на вывод средств</h3>
-                        <p class="services-text">тут будет text</p>
-                    </div>
-                    <div class="services__item line">
-                        <h3 class="services__subtitle">тарифы на транзит</h3>
-                        <p class="services-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque facere
-                            ut odit quam assumenda aliquam libero veritatis dignissimos placeat</p>
+        </section>
+        <section class="rate center-items" id="rate">
+            <div class="rate__body wrapper">
+                <div class="rate__top">
+                    <div class="summary">
+                        <h2 class="summary__title">Pricing Plan</h2>
+                        <p class="summary__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
                     </div>
                 </div>
-            </section>
-            <section class="privilege">
-                <h2 class="privilege__title title-topic">преимущество</h2>
-                <div class="privilege__body">
-                    <div class="privilege__decor">
-                        <h3 class="privilege__subtitle">к каждому клиенту индивидуальный подход</h3>
+                <div class="rate__bottom row-list">
+                    <div class="item item__decor-c price">
+                        <h2 class="price__title">Free-Trail</h2>
+                        <p class="price__text">
+                            <sup class="price__text currency-p">$</sup>
+                            <span class="price__text value-p">00</span>
+                            <span class="price__text period-p">per month</span>
+                        </p>
+                        <p class="price__text-p price__text-p_decor">
+                            30 Free Trail
+                        </p>
+                        <p class="price__text-p price__text-p_decor">
+                            5 Free Projects
+                        </p>
+                        <p class="price__text-p price__text-p_decor">
+                            PHP 5 Enabled
+                        </p>
+                        <p class="price__text-p price__text-p_decor">
+                            24/7 Suports
+                        </p>
+                        <button class="price__btn link-btn uppercase">Order Now</button>
+                    </div>
+                    <div class="item item__decor-c price">
+                        <h2 class="price__title">Free-Trail</h2>
+                        <p class="price__text">
+                            <sup class="price__text currency-p">$</sup>
+                            <span class="price__text value-p">50</span>
+                            <span class="price__text period-p">per month</span>
+                        </p>
+                        <p class="price__text-p price__text-p_decor">
+                            30 Free Trail
+                        </p>
+                        <p class="price__text-p price__text-p_decor">
+                            5 Free Projects
+                        </p>
+                        <p class="price__text-p price__text-p_decor">
+                            PHP 5 Enabled
+                        </p>
+                        <p class="price__text-p price__text-p_decor">
+                            24/7 Suports
+                        </p>
+                        <button class="price__btn link-btn uppercase">Order Now</button>
+                    </div>
+                    <div class="item item__decor-c price">
+                        <h2 class="price__title">Free-Trail</h2>
+                        <p class="price__text">
+                            <sup class="price__text currency-p">$</sup>
+                            <span class="price__text value-p">99</span>
+                            <span class="price__text period-p">per month</span>
+                        </p>
+                        <p class="price__text-p price__text-p_decor">
+                            30 Free Trail
+                        </p>
+                        <p class="price__text-p price__text-p_decor">
+                            5 Free Projects
+                        </p>
+                        <p class="price__text-p price__text-p_decor">
+                            PHP 5 Enabled
+                        </p>
+                        <p class="price__text-p price__text-p_decor">
+                            24/7 Suports
+                        </p>
+                        <button class="price__btn link-btn uppercase">Order Now</button>
                     </div>
                 </div>
-            </section>
-            <section class="condition" id="схема">
-                <h2 class="condition__title title-topic">Cхема работы</h2>
-                <div class="condition__body">
-                    <div class="condition__item condition__item_decor">
-                        <p class="condition__text services-text">1. Согласие с пользовательским
-                            <strong>соглашением.</strong></p>
-                    </div>
-                    <div class="condition__item condition__item_decor">
-                        <p class="condition__text services-text">2. Перевод денег на счет <strong>компании.</strong></p>
-                    </div>
-                    <div class="condition__item condition__item_decor">
-                        <p class="condition__text services-text">3. Ожидание выплат с <strong>доходом.</strong></p>
+            </div>
+        </section>
+        <section class="team center-items" id="team">
+            <div class="team__body wrapper">
+                <div class="team__top">
+                    <div class="summary">
+                        <h2 class="summary__title">Our Team Member</h2>
+                        <p class="summary__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
                     </div>
                 </div>
-            </section>
-            <section class="guide">
-                <h2 class="guide__title title-topic">Руководители</h2>
-                <div class="guide__body">
-                    <div class="team">
-                        <figure class="team__item">
-                            <h3 class="team__title services__subtitle">Главный руководитель.</h3>
-                            <p class="team__text services-text">Сава Маркин</p>
-                            <div class="team__body-img">
-                                <img class="team__img" src="./image/user__1.png" alt="картинка">
-                            </div>
+                <div class="team__bottom">
+                    <div class="team__slider row-list">
+                        <figure class="team__s">
+                            <img class="team__img" src="image/user__1.png" alt="photo">
+                            <h3 class="team__suntitle subtitle">John Doe</h3>
+                            <p class="team__text text">General Manager</p>
+                            <a class="ico__link ico" href="#">
+                                <svg class="ico__f icon" viewBox="0 0 24 24" width="37" height="27"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16 3.98h2.19V.17a28.3 28.3 0 00-3.2-.17C8.07 0 9.96 7.85 9.68 9H6.2v4.27h3.48V24h4.28V13.27h3.34L17.82 9h-3.87c.18-2.82-.77-5.02 2.05-5.02z" />
+                                </svg>
+                            </a>
+                            <a class="ico__link ico" href="#">
+                                <svg class="ico__t icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    width="37" height="27">
+                                    <path
+                                        d="M512 97c-19 9-39 14-60 17 21-13 38-34 46-58-21 12-43 20-67 25a105 105 0 00-179 96c-87-4-164-46-216-110a106 106 0 0032 140c-17 0-34-5-48-13v2c0 51 37 93 85 103a105 105 0 01-48 1c14 42 52 73 98 74A211 211 0 010 417c46 30 102 47 161 47a297 297 0 00298-312c21-15 39-34 53-55z" />
+                                </svg>
+                            </a>
+                            <a class="ico__link ico" href="#">
+                                <svg class="ico__t icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.6 511.6"
+                                    width="37" height="27">
+                                    <path
+                                        d="M302 328c31-13 55-31 73-54 18-22 27-47 27-73s-9-51-27-73c-18-23-42-41-73-54s-65-19-101-19-70 6-101 19-55 31-73 54a112 112 0 00-7 137c14 20 32 37 56 50a157 157 0 01-13 24 985 985 0 00-24 28l-1 2-1 1v5c0 3 1 5 3 6l6 3h1a239 239 0 00104-41 287 287 0 00151-15z" />
+                                    <path
+                                        d="M491 338a112 112 0 00-1-130c-14-20-33-37-58-50a147 147 0 01-13 115c-12 23-31 44-54 61-22 16-48 28-76 37a302 302 0 01-113 12c38 25 83 37 135 37 16 0 33-1 50-4a240 240 0 00104 41l6-2 4-6v-2-2l-1-2v-1a14 14 0 00-2-3 36 36 0 01-3-3 199 199 0 00-14-16 868 868 0 00-13-19l-6-12c23-14 42-31 55-51z" />
+                                </svg>
+                            </a>
+                            <a class="ico__link ico" href="#">
+                                <svg class="ico__t icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    width="37" height="27">
+                                    <path
+                                        d="M20 13c-.5-.5-.4-.7 0-1.1 0 0 3.1-4.4 3.5-6 .1-.5 0-.9-.8-.9H20c-.6 0-1 .3-1.1.7 0 0-1.3 3.2-3.2 5.3-.6.6-1 .8-1.3.8-.1 0-.4-.2-.4-.7V5.9c0-.6-.2-.9-.7-.9H9.2c-.5 0-.7.3-.7.6 0 .6 1 .8 1 2.5V12c0 .8-.1 1-.5 1-.8 0-3-3.2-4.3-6.9-.2-.7-.5-1-1.2-1H1c-.7 0-.9.3-.9.7 0 .7.9 4.1 4.1 8.6 2.2 3 5.3 4.7 8 4.7 1.7 0 2-.4 2-1 0-3-.2-3.2.6-3.2.4 0 1 .2 2.6 1.7 1.8 1.7 2.1 2.5 3.1 2.5H23c.8 0 1.2-.4 1-1-.6-1.6-4-4.8-4-5z" />
+                                </svg>
+                            </a>
                         </figure>
-                        <figure class="team__item">
-                            <h3 class="team__title services__subtitle">Программист.</h3>
-                            <p class="team__text services-text">Мангушев Сергей</p>
-                            <div class="team__body-img">
-                                <img class="team__img" src="./image/user__2.png" alt="картинка">
-                            </div>
+                        <figure class="team__s">
+                            <img class="team__img" src="image/user__1.png" alt="photo">
+                            <h3 class="team__suntitle subtitle">John Doe</h3>
+                            <p class="team__text text">General Manager</p>
+                            <a class="ico__link ico" href="">
+                                <svg class="ico__f icon" viewBox="0 0 24 24" width="37" height="27"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16 3.98h2.19V.17a28.3 28.3 0 00-3.2-.17C8.07 0 9.96 7.85 9.68 9H6.2v4.27h3.48V24h4.28V13.27h3.34L17.82 9h-3.87c.18-2.82-.77-5.02 2.05-5.02z" />
+                                </svg>
+                            </a>
+                            <a class="ico__link ico" href="#">
+                                <svg class="ico__t icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    width="37" height="27">
+                                    <path
+                                        d="M512 97c-19 9-39 14-60 17 21-13 38-34 46-58-21 12-43 20-67 25a105 105 0 00-179 96c-87-4-164-46-216-110a106 106 0 0032 140c-17 0-34-5-48-13v2c0 51 37 93 85 103a105 105 0 01-48 1c14 42 52 73 98 74A211 211 0 010 417c46 30 102 47 161 47a297 297 0 00298-312c21-15 39-34 53-55z" />
+                                </svg>
+                            </a>
+                            <a class="ico__link ico" href="#">
+                                <svg class="ico__t icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.6 511.6"
+                                    width="37" height="27">
+                                    <path
+                                        d="M302 328c31-13 55-31 73-54 18-22 27-47 27-73s-9-51-27-73c-18-23-42-41-73-54s-65-19-101-19-70 6-101 19-55 31-73 54a112 112 0 00-7 137c14 20 32 37 56 50a157 157 0 01-13 24 985 985 0 00-24 28l-1 2-1 1v5c0 3 1 5 3 6l6 3h1a239 239 0 00104-41 287 287 0 00151-15z" />
+                                    <path
+                                        d="M491 338a112 112 0 00-1-130c-14-20-33-37-58-50a147 147 0 01-13 115c-12 23-31 44-54 61-22 16-48 28-76 37a302 302 0 01-113 12c38 25 83 37 135 37 16 0 33-1 50-4a240 240 0 00104 41l6-2 4-6v-2-2l-1-2v-1a14 14 0 00-2-3 36 36 0 01-3-3 199 199 0 00-14-16 868 868 0 00-13-19l-6-12c23-14 42-31 55-51z" />
+                                </svg>
+                            </a>
+                            <a class="ico__link ico" href="#">
+                                <svg class="ico__t icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    width="37" height="27">
+                                    <path
+                                        d="M20 13c-.5-.5-.4-.7 0-1.1 0 0 3.1-4.4 3.5-6 .1-.5 0-.9-.8-.9H20c-.6 0-1 .3-1.1.7 0 0-1.3 3.2-3.2 5.3-.6.6-1 .8-1.3.8-.1 0-.4-.2-.4-.7V5.9c0-.6-.2-.9-.7-.9H9.2c-.5 0-.7.3-.7.6 0 .6 1 .8 1 2.5V12c0 .8-.1 1-.5 1-.8 0-3-3.2-4.3-6.9-.2-.7-.5-1-1.2-1H1c-.7 0-.9.3-.9.7 0 .7.9 4.1 4.1 8.6 2.2 3 5.3 4.7 8 4.7 1.7 0 2-.4 2-1 0-3-.2-3.2.6-3.2.4 0 1 .2 2.6 1.7 1.8 1.7 2.1 2.5 3.1 2.5H23c.8 0 1.2-.4 1-1-.6-1.6-4-4.8-4-5z" />
+                                </svg>
+                            </a>
                         </figure>
-                        <figure class="team__item">
-                            <h3 class="team__title services__subtitle">Test.</h3>
-                            <p class="team__text services-text">Test Variant</p>
-                            <div class="team__body-img">
-                                <img class="team__img" src="./image/user__3.png" alt="картинка">
-                            </div>
+                        <figure class="team__s">
+                            <img class="team__img" src="image/user__1.png" alt="photo">
+                            <h3 class="team__suntitle subtitle">John Doe</h3>
+                            <p class="team__text text">General Manager</p>
+                            <a class="ico__link ico" href="">
+                                <svg class="ico__f icon" viewBox="0 0 24 24" width="37" height="27"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16 3.98h2.19V.17a28.3 28.3 0 00-3.2-.17C8.07 0 9.96 7.85 9.68 9H6.2v4.27h3.48V24h4.28V13.27h3.34L17.82 9h-3.87c.18-2.82-.77-5.02 2.05-5.02z" />
+                                </svg>
+                            </a>
+                            <a class="ico__link ico" href="#">
+                                <svg class="ico__t icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    width="37" height="27">
+                                    <path
+                                        d="M512 97c-19 9-39 14-60 17 21-13 38-34 46-58-21 12-43 20-67 25a105 105 0 00-179 96c-87-4-164-46-216-110a106 106 0 0032 140c-17 0-34-5-48-13v2c0 51 37 93 85 103a105 105 0 01-48 1c14 42 52 73 98 74A211 211 0 010 417c46 30 102 47 161 47a297 297 0 00298-312c21-15 39-34 53-55z" />
+                                </svg>
+                            </a>
+                            <a class="ico__link ico" href="#">
+                                <svg class="ico__t icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.6 511.6"
+                                    width="37" height="27">
+                                    <path
+                                        d="M302 328c31-13 55-31 73-54 18-22 27-47 27-73s-9-51-27-73c-18-23-42-41-73-54s-65-19-101-19-70 6-101 19-55 31-73 54a112 112 0 00-7 137c14 20 32 37 56 50a157 157 0 01-13 24 985 985 0 00-24 28l-1 2-1 1v5c0 3 1 5 3 6l6 3h1a239 239 0 00104-41 287 287 0 00151-15z" />
+                                    <path
+                                        d="M491 338a112 112 0 00-1-130c-14-20-33-37-58-50a147 147 0 01-13 115c-12 23-31 44-54 61-22 16-48 28-76 37a302 302 0 01-113 12c38 25 83 37 135 37 16 0 33-1 50-4a240 240 0 00104 41l6-2 4-6v-2-2l-1-2v-1a14 14 0 00-2-3 36 36 0 01-3-3 199 199 0 00-14-16 868 868 0 00-13-19l-6-12c23-14 42-31 55-51z" />
+                                </svg>
+                            </a>
+                            <a class="ico__link ico" href="#">
+                                <svg class="ico__t icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    width="37" height="27">
+                                    <path
+                                        d="M20 13c-.5-.5-.4-.7 0-1.1 0 0 3.1-4.4 3.5-6 .1-.5 0-.9-.8-.9H20c-.6 0-1 .3-1.1.7 0 0-1.3 3.2-3.2 5.3-.6.6-1 .8-1.3.8-.1 0-.4-.2-.4-.7V5.9c0-.6-.2-.9-.7-.9H9.2c-.5 0-.7.3-.7.6 0 .6 1 .8 1 2.5V12c0 .8-.1 1-.5 1-.8 0-3-3.2-4.3-6.9-.2-.7-.5-1-1.2-1H1c-.7 0-.9.3-.9.7 0 .7.9 4.1 4.1 8.6 2.2 3 5.3 4.7 8 4.7 1.7 0 2-.4 2-1 0-3-.2-3.2.6-3.2.4 0 1 .2 2.6 1.7 1.8 1.7 2.1 2.5 3.1 2.5H23c.8 0 1.2-.4 1-1-.6-1.6-4-4.8-4-5z" />
+                                </svg>
+                            </a>
+                        </figure>
+                        <figure class="team__s">
+                            <img class="team__img" src="image/user__2.png" alt="photo">
+                            <h3 class="team__suntitle subtitle">Seryozha Mangushev</h3>
+                            <p class="team__text text">Junior Programmer</p>
+                            <a class="ico__link ico" href="">
+                                <svg class="ico__f icon" viewBox="0 0 24 24" width="37" height="27"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16 3.98h2.19V.17a28.3 28.3 0 00-3.2-.17C8.07 0 9.96 7.85 9.68 9H6.2v4.27h3.48V24h4.28V13.27h3.34L17.82 9h-3.87c.18-2.82-.77-5.02 2.05-5.02z" />
+                                </svg>
+                            </a>
+                            <a class="ico__link ico" href="#">
+                                <svg class="ico__t icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    width="37" height="27">
+                                    <path
+                                        d="M512 97c-19 9-39 14-60 17 21-13 38-34 46-58-21 12-43 20-67 25a105 105 0 00-179 96c-87-4-164-46-216-110a106 106 0 0032 140c-17 0-34-5-48-13v2c0 51 37 93 85 103a105 105 0 01-48 1c14 42 52 73 98 74A211 211 0 010 417c46 30 102 47 161 47a297 297 0 00298-312c21-15 39-34 53-55z" />
+                                </svg>
+                            </a>
+                            <a class="ico__link ico" href="#">
+                                <svg class="ico__t icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.6 511.6"
+                                    width="37" height="27">
+                                    <path
+                                        d="M302 328c31-13 55-31 73-54 18-22 27-47 27-73s-9-51-27-73c-18-23-42-41-73-54s-65-19-101-19-70 6-101 19-55 31-73 54a112 112 0 00-7 137c14 20 32 37 56 50a157 157 0 01-13 24 985 985 0 00-24 28l-1 2-1 1v5c0 3 1 5 3 6l6 3h1a239 239 0 00104-41 287 287 0 00151-15z" />
+                                    <path
+                                        d="M491 338a112 112 0 00-1-130c-14-20-33-37-58-50a147 147 0 01-13 115c-12 23-31 44-54 61-22 16-48 28-76 37a302 302 0 01-113 12c38 25 83 37 135 37 16 0 33-1 50-4a240 240 0 00104 41l6-2 4-6v-2-2l-1-2v-1a14 14 0 00-2-3 36 36 0 01-3-3 199 199 0 00-14-16 868 868 0 00-13-19l-6-12c23-14 42-31 55-51z" />
+                                </svg>
+                            </a>
+                            <a class="ico__link ico" href="https://vk.com/id269791339" target="_blank">
+                                <svg class="ico__t icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    width="37" height="27">
+                                    <path
+                                        d="M20 13c-.5-.5-.4-.7 0-1.1 0 0 3.1-4.4 3.5-6 .1-.5 0-.9-.8-.9H20c-.6 0-1 .3-1.1.7 0 0-1.3 3.2-3.2 5.3-.6.6-1 .8-1.3.8-.1 0-.4-.2-.4-.7V5.9c0-.6-.2-.9-.7-.9H9.2c-.5 0-.7.3-.7.6 0 .6 1 .8 1 2.5V12c0 .8-.1 1-.5 1-.8 0-3-3.2-4.3-6.9-.2-.7-.5-1-1.2-1H1c-.7 0-.9.3-.9.7 0 .7.9 4.1 4.1 8.6 2.2 3 5.3 4.7 8 4.7 1.7 0 2-.4 2-1 0-3-.2-3.2.6-3.2.4 0 1 .2 2.6 1.7 1.8 1.7 2.1 2.5 3.1 2.5H23c.8 0 1.2-.4 1-1-.6-1.6-4-4.8-4-5z" />
+                                </svg>
+                            </a>
                         </figure>
                     </div>
                 </div>
-            </section>
-        </div>
-        <div class="wrapper wrapper_fon-page">
-            <section class="company" id='компания'>
-                <h2 class="number">03</h2>
-                <h2 class="company__title title-topic">о нас</h2>
-                <div class="company__inner">
-                    <p class="company__text services-text">Далеко-далеко за словесными горами в стране гласных и
-                        согласных
-                        живут рыбные тексты. Рукописи что о букв, взобравшись там заголовок предложения ему большой это
-                        речью страну языком обеспечивает рыбного курсивных, наш страна предупреждал осталось но
-                        реторический
-                        однажды! Решила агентство о предупреждал парадигматическая проектах жизни оксмокс правилами
-                        дорогу
-                        если все буквоград своих бросил наш, использовало продолжил! Лучше первую маленькая
-                        парадигматическая буквенных? Города свое от всех великий выйти? Текст повстречался, собрал
-                        заголовок
-                        пор рыбного дал рыбными напоивший решила, правилами переулка путь свой сбить до ручеек скатился
-                        точках то вскоре коварных города необходимыми единственное домах, грустный заглавных продолжил?
-                        Обеспечивает продолжил ведущими свой залетают приставка оксмокс, все предложения?</p>
-                    <p class="company__text services-text">Далеко-далеко за словесными горами в стране гласных и
-                        согласных
-                        живут рыбные тексты. Рукописи что о букв, взобравшись там заголовок предложения ему большой это
-                        речью страну языком обеспечивает рыбного курсивных, наш страна предупреждал осталось но
-                        реторический
-                        однажды! Решила агентство о предупреждал парадигматическая проектах жизни оксмокс правилами
-                        дорогу
-                        если все буквоград своих бросил наш, использовало продолжил! Лучше первую маленькая
-                        парадигматическая буквенных? Города свое от всех великий выйти? Текст повстречался, собрал
-                        заголовок
-                        пор рыбного дал рыбными напоивший решила, правилами переулка путь свой сбить до ручеек скатился
-                        точках то вскоре коварных города необходимыми единственное домах, грустный заглавных продолжил?
-                        Обеспечивает продолжил ведущими свой залетают приставка оксмокс, все предложения?</p>
-                </div>
-            </section>
-            <section class="reviews" id="отзывы">
-                <h2 class="reviews__title title-topic">отзывы наших клиентов</h2>
-                <div class="reviews__slider">
-                    <div class="reviews__slider-comment">
-                        <div class="reviews__slider-item">
-                            <div class="inner-slider">
-                                <h2 class="number number_none">01</h2>
-                                <h3 class="reviews__slider-title reviews__slider-title_decor">дмитрий шапкин</h3>
-                                <h4 class="reviews__slider-subtitle">отзыв</h4>
-                                <p class="reviews__slider-text services-text">Далеко-далеко за словесными горами в
-                                    стране гласных и
-                                    согласных
-                                    живут рыбные тексты. Не ее возвращайся снова даже продолжил, деревни собрал вдали
-                                    моей
-                                    переулка путь реторический всемогущая рекламных осталось, инициал великий текст!
-                                    Свое?
-                                </p>
-                                <p class="reviews__slider-text services-text">Далеко-далеко за словесными горами в
-                                    стране гласных и
-                                    согласных
-                                    живут рыбные тексты. Не ее возвращайся снова даже продолжил, деревни собрал вдали
-                                    моей
-                                    переулка путь реторический всемогущая рекламных осталось, инициал великий текст!
-                                    Свое?
-                                </p>
-                            </div>
-                            <img class="reviews__slider-img" src="./image/use-sliderr__1.png" alt="картинка">
-                        </div>
-                        <div class="reviews__slider-item">
-                            <div class="inner-slider">
-                                <h2 class="number number_none">02</h2>
-                                <h3 class="reviews__slider-title reviews__slider-title_decor">дима карновалов</h3>
-                                <h4 class="reviews__slider-subtitle">отзыв</h4>
-                                <p class="reviews__slider-text services-text">
-                                    Не ее возвращайся снова даже продолжил, деревни собрал вдали моей
-                                    переулка путь реторический всемогущая рекламных осталось, инициал великий текст!
-                                    Свое?
-                                </p>
-                                <p class="reviews__slider-text services-text">Не ее возвращайся снова даже продолжил,
-                                    деревни собрал вдали моей
-                                    переулка путь реторический всемогущая рекламных осталось, инициал великий текст!
-                                    Свое?
-                                </p>
-                            </div>
-                            <img class="reviews__slider-img" src="./image/use-sliderr__2.png" alt="картинка">
-                        </div>
+            </div>
+        </section>
+        <section class="blog center-items blog-grid" id="blog">
+            <div class="blog__body wrapper">
+                <div class="blog__top">
+                    <div class="summary">
+                        <h2 class="summary__title">Blog</h2>
+                        <p class="summary__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
                     </div>
                 </div>
-            </section>
-            <section class='support'>
-                <h2 class="support-title title-topic">остались вопросы</h2>
-                <div class="support__list">
-                    <div class="support__item">
-                        <a class="support__item-link" href="https://vk.com/im?peers=210807097_c76">
-                            <div class="support__img-hidden">
-                                <img class="support__img" src="./image/support__1.jpg" alt="картинка">
-                                <div class="support__content">
-                                    <h3 class="support__subtitle">Не нашел нужного вопроса.</h3>
-                                </div>
-                            </div>
+                <div class="blog__bottom blog-grid">
+                    <div class="blog__item grid-item-b">
+                        <img class="blog__img" src="image/blog/blog__card1.jpg" alt="photo">
+                    </div>
+                    <div class="blog__item grid-item-b">
+                        <a class="blog__link" href="">
+                            <h3 class="blog__subtitle subtitle">SEO Quis Vestibulum</h3>
+                            <time class="blog__time">14-07-2020</time>
+                            <p class="blog__time">Development</p>
+                            <p class="blog__text text line-decor">Dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+
+                                Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+
+                                Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+
+                                Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
                         </a>
                     </div>
-                    <div class="support__item">
-                        <a class="support__item-link" href="https://vk.com/im?peers=210807097_c76">
-                            <div class="support__img-hidden">
-                                <img class="support__img" src="./image/support__2.jpg" alt="картинка">
-                                <div class="support__content">
-                                    <h3 class="support__subtitle">Не могу оплатить.</h3>
-                                </div>
-                            </div>
+                    <div class="blog__item grid-item-b">
+                        <a class="blog__link" href="">
+                            <h3 class="blog__subtitle subtitle">SEO Quis Vestibulum</h3>
+                            <time class="blog__time">14-07-2020</time>
+                            <p class="blog__time">Development</p>
+                            <p class="blog__text text line-decor">Dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
                         </a>
                     </div>
-                    <div class="support__item">
-                        <a class="support__item-link" href="https://vk.com/im?peers=210807097_c76">
-                            <div class="support__img-hidden">
-                                <img class="support__img" src="./image/support__3.jpg" alt="картинка">
-                                <div class="support__content">
-                                    <h3 class="support__subtitle">Не могу оставить комментарий.</h3>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="blog__item grid-item-b">
+                        <img class="blog__img" src="image/blog/blog__card2.jpg" alt="photo">
                     </div>
-                    <div class="support__item">
-                        <a class="support__item-link" href="https://vk.com/im?peers=210807097_c76">
-                            <div class="support__img-hidden">
-                                <img class="support__img" src="./image/support__4.jpg" alt="картинка">
-                                <div class="support__content">
-                                    <h3 class="support__subtitle">Не получил деньги.</h3>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="blog__item grid-item-b">
+                        <img class="blog__img" src="image/blog/blog__card3.jpg" alt="photo">
                     </div>
-                    <div class="support__item">
-                        <a class="support__item-link" href="https://vk.com/im?peers=210807097_c76">
-                            <div class="support__img-hidden">
-                                <img class="support__img" src="./image/support__1.jpg" alt="картинка">
-                                <div class="support__content">
-                                    <h3 class="support__subtitle">Не нашел нужного вопроса.</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="support__item">
-                        <a class="support__item-link" href="https://vk.com/im?peers=210807097_c76">
-                            <div class="support__img-hidden">
-                                <img class="support__img" src="./image/support__1.jpg" alt="картинка">
-                                <div class="support__content">
-                                    <h3 class="support__subtitle">Не нашел нужного вопроса.</h3>
-                                </div>
-                            </div>
+                    <div class="blog__item grid-item-b">
+                        <a class="blog__link" href="">
+                            <h3 class="blog__subtitle subtitle">SEO Quis Vestibulum</h3>
+                            <time class="blog__time">14-07-2020</time>
+                            <p class="blog__time">Development</p>
+                            <p class="blog__text text line-decor">Dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
                         </a>
                     </div>
                 </div>
-            </section>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dicta maiores nostrum culpa voluptatem
-            consequatur voluptatibus facilis tenetur fuga at quae repudiandae optio non libero rerum, corporis
-            exercitationem iste incidunt deleniti, impedit earum animi, officia totam temporibus. Obcaecati, sequi
-            corporis, quia totam aut labore, deserunt optio laboriosam eaque atque error? Non, necessitatibus alias?
-            Est, dolorum nobis. Reprehenderit obcaecati atque velit eius repellendus praesentium impedit nesciunt.
-            Fugiat repellat veniam, molestias optio laborum ipsum dignissimos ducimus pariatur atque, omnis a
-            voluptatibus itaque perspiciatis voluptates. Aperiam illo quos molestias dicta delectus deleniti
-            consequuntur est? Tenetur in porro cum ex est, iusto repellat voluptate modi a voluptatibus hic aut labore
-            omnis obcaecati. Quidem sed excepturi a aliquam soluta delectus sapiente doloribus, aspernatur officiis
-            cupiditate eum quos repellat voluptates dolores illum nihil est dolorum sequi, quaerat suscipit corporis
-            amet fugiat. Nihil aliquam laborum laboriosam molestias sunt autem! Quam laudantium vitae distinctio, a
-            delectus rem doloribus voluptatibus magni reprehenderit. At quod assumenda atque numquam similique iste
-            possimus veritatis ratione maiores provident facere sed perspiciatis natus porro rem debitis accusantium
-            repellendus veniam modi error quas reprehenderit, aspernatur nesciunt? Odit quisquam cum quibusdam quas,
-            ipsam, velit eum numquam error id reiciendis quod! Quo ratione tempora aliquid mollitia voluptatem fugiat
-            eius laboriosam blanditiis quaerat nam, error iure. Error velit quas iusto debitis doloribus explicabo!
-            Sequi voluptates illo non numquam incidunt ea, ut qui harum sunt, ullam laboriosam dolor tempore? Omnis
-            officiis quaerat perferendis corrupti velit itaque ipsa ipsam similique placeat natus? Tempora, suscipit
-            veniam. Distinctio inventore quod molestias voluptatibus natus, impedit est exercitationem cum quo at, eius
-            eaque odio non ex sit mollitia ab nostrum ipsam! Odio ullam neque nisi? Beatae accusantium doloribus, quos
-            tenetur quidem illo itaque ducimus unde laborum modi, dolorem voluptatum deleniti atque doloremque eos sit
-            dolore ab, vel harum praesentium! Magnam dolores perspiciatis est minus, maxime nam accusantium numquam
-            expedita rem quia, voluptas earum non maiores fugit adipisci aut, qui aliquid porro. Enim dolores iusto,
-            molestiae explicabo natus adipisci optio sapiente ipsum suscipit aperiam corrupti perspiciatis esse delectus
-            possimus deleniti earum eveniet laboriosam quisquam, ducimus rerum, facere necessitatibus odit? Itaque rem
-            nulla doloremque vero et corporis esse placeat beatae eius. Consequatur cumque quam delectus alias facere
-            deleniti beatae non voluptas, repellat eius error voluptatibus voluptate blanditiis. Enim harum ipsa ipsum
-            libero. Quae dicta aliquam ipsum. Necessitatibus cupiditate corporis sint quo excepturi voluptates ipsum
-            sunt incidunt totam? Aperiam animi nemo qui suscipit incidunt quisquam ratione a reiciendis, doloribus
-            eveniet mollitia. Eaque amet culpa voluptatem rerum doloribus repellat enim quam provident veritatis iusto
-            nostrum, error hic nobis ducimus quis quibusdam consectetur nihil impedit alias cupiditate necessitatibus
-            magni! Id voluptatibus nam cumque laboriosam, nulla, magnam similique dignissimos eaque nesciunt, esse
-            nostrum ipsa pariatur perspiciatis cum iste sunt necessitatibus ducimus quod. Eum sunt aperiam soluta
-            corporis ex, numquam dolor repellendus officiis, quos hic, natus illo accusamus praesentium. Laboriosam
-            corporis doloribus rem soluta pariatur, a ex exercitationem saepe in deleniti excepturi architecto ab
-            molestias, repellendus ducimus provident doloremque. Ratione consequatur vero asperiores, ea eos dolore
-            placeat quaerat fuga veniam quibusdam!</p>
+                <div class="works__menu-b">
+                    <button
+                        class="blog__btn-m blog__btn-m_centered blog__btn-m_enlarged btn-active  link-btn uppercase">view
+                        all</button>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="page-footer">
-        <h3 class="version-check">v 0.65 beta</h3>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="./js/script.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/slick.min.js"></script>
 </body>
 
 </html>
