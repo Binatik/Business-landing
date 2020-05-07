@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!-- Функция: outline - требуется для использования клавиатуры.   
+    По умолчанию функция включена:  Если вы хотите выключить функцию - перейдите > F12 > console.   
+    В консоль введите cmd "line()" для отк. линий. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="image/guarantee.png">
+    <link type="text/css" rel="stylesheet" href="./css/style.min.css">
+    <title>Обналичивание денег</title>
+</head>
+
+<body>
+    <header class="page-header" id="главная">
+        <div class="wrapper">
+            <div class="logo">
+                <h1 class="logo__title title logo__title_decor">обналичивание <strong
+                        class="logo__title logo__title_color">денег</strong>
+                </h1>
+                <a class="logo__link logo__link_effect" href="#" title='Гарантия качества!'>
+                    <svg class="logo__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.998 511" width='80'
+                        height='80'>
+                        <path
+                            d="M511.84 226.781v-.004c-.836-7.976-4.969-15.328-11.336-20.199l-29.14-22.687 10.952-36.141a29.392 29.392 0 00-2.66-23.121 29.388 29.388 0 00-18.691-13.867l-36.66-8.559-4.68-37.351c-1.004-8-5.316-15.305-11.832-20.032-6.523-4.746-14.809-6.593-22.719-5.07l-36.972 7.09-19.473-32.223C320.879 1.793 304.605-3.05 290.785 3.34c-.973.45-1.91.988-2.726 1.566l-32.09 22.352-30.895-21.52a29.388 29.388 0 00-22.804-4.605c-7.883 1.672-14.797 6.594-18.965 13.492L163.84 46.844l-36.977-7.094c-7.918-1.516-16.195.332-22.707 5.066A29.358 29.358 0 0092.32 64.852l-4.68 37.355-38.773 9.05-1.82.595-.672.293c-14.086 6.16-21.133 21.136-16.75 35.605l10.95 36.14-30.391 23.641-1.762 1.531-.496.543c-10.2 11.141-10.598 27.993-.95 39.258l23.794 28.453-19.286 34.997-.77 1.75-.222.652c-4.808 14.37 1.742 29.988 15.235 36.32l34.078 15.992-3.192 37.508a29.365 29.365 0 007.41 22.063 29.385 29.385 0 0021.168 9.68l37.637.75 12.344 35.558a29.345 29.345 0 0015.738 17.14c7.36 3.278 15.84 3.364 23.278.235l34.69-14.621 27.231 29.058 1.426 1.27.55.41c5.38 3.973 11.665 5.918 17.892 5.918 7.878 0 15.66-3.117 21.351-9.191l25.742-27.465 34.696 14.625a29.381 29.381 0 0023.257-.235 29.356 29.356 0 0015.747-17.14l12.347-35.563 39.813-.793 1.89-.207.68-.136c14.844-3.028 25.09-16.508 23.828-31.352l-3.187-37.512 34.082-15.992a29.37 29.37 0 0015.398-17.45 29.377 29.377 0 00-2.203-23.167l-18.242-33.102 23.797-28.453a29.367 29.367 0 006.867-22.082zM257.563 383.773c-70.301 0-127.497-57.195-127.497-127.496 0-70.304 57.196-127.496 127.496-127.496 70.305 0 127.5 57.192 127.5 127.496 0 70.301-57.199 127.496-127.5 127.496zm0 0" />
+                        <path fill='#000'
+                            d="M257.563 158.8c-53.747 0-97.477 43.727-97.477 97.477 0 53.746 43.73 97.473 97.476 97.473 53.75 0 97.477-43.727 97.477-97.473 0-53.75-43.726-97.476-97.476-97.476zm57.875 79.118l-69.836 69.832a14.947 14.947 0 01-10.614 4.398c-3.84 0-7.683-1.464-10.613-4.398l-26.684-26.684c-5.863-5.863-5.863-15.367 0-21.23 5.86-5.86 15.364-5.86 21.227 0l16.074 16.074 59.219-59.219c5.86-5.863 15.367-5.863 21.226 0 5.864 5.86 5.864 15.364 0 21.227zm0 0" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="wrapper">
+                <div class="header-menu__body">
+                    <a class="number__link menu-link" href="tel:+79645729848" title="Остались вопросы, звоните нам!">+7
+                        (964)572-98-48</a>
+                    <div class="menu-burger"><span></span></div>
+                    <nav class="navigation">
+                        <ul class="navigation__list list">
+                            <li class="navigation__item"><a class="navigation__link navigation__link_effect menu-link "
+                                    href="#главная" title="Вернуться на главную.">главная</a>
+                            </li>
+                            <li class="navigation__item"><a class="navigation__link navigation__link_effect menu-link"
+                                    href="#возможности" title="Узнать возможности компании.">возможности</a>
+                            </li>
+                            <li class="navigation__item"><a class="navigation__link navigation__link_effect menu-link"
+                                    href="#схема" title="Посмотреть, как работает компания по пунктам.">схема</a>
+                            </li>
+                            <li class="navigation__item"><a class="navigation__link navigation__link_effect menu-link"
+                                    href="#компания" title="Узнать о компании больше.">компания</a>
+                            </li>
+                            <li class="navigation__item"><a class="navigation__link navigation__link_effect menu-link"
+                                    href="#отзывы" title="Посмотреть реальные отзывы клиентов">отзывы</a>
+                            </li>
+                            <li class="navigation__item"><a class="navigation__link navigation__link_effect menu-link"
+                                    href="#компания"
+                                    title="Связаться с модераторами, если остались вопросы.">контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="header-menu header-menu_fixe"></div>
+    </header>
+    <main class='page-main'>
+        <div class="wrapper wrapper_fon wrapper_line">
+            <script type="text/javascript" src="https://vk.com/js/api/openapi.js?167"></script>
+
+            <div class="subscription">
+                <h2 class="number">01</h2>
+                <h3 class="subscription__title subscription__title_decor title title-topic">Подпишись и будь всегда с
+                    нами!</h3>
+                <div class="subscription__fon-link border-line">
+                    <div class="vk_Wrapper">
+                        <div id="vk_groups"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper wrapper_fon-page">
+            <section class="services" id="возможности">
+                <h2 class="number">02</h2>
+                <h2 class="services__title title-topic">услуги</h2>
+                <div class="services__body">
+                    <div class="services__item line">
+                        <h3 class="services__subtitle">оптимизация ндс</h3>
+                        <p class="services-text">тут будет text</p>
+                    </div>
+                    <div class="services__item line">
+                        <h3 class="services__subtitle">тарифы на вывод средств</h3>
+                        <p class="services-text">тут будет text</p>
+                    </div>
+                    <div class="services__item line">
+                        <h3 class="services__subtitle">тарифы на транзит</h3>
+                        <p class="services-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque facere
+                            ut odit quam assumenda aliquam libero veritatis dignissimos placeat</p>
+                    </div>
+                </div>
+            </section>
+            <section class="privilege">
+                <h2 class="privilege__title title-topic">преимущество</h2>
+                <div class="privilege__body">
+                    <div class="privilege__decor">
+                        <h3 class="privilege__subtitle">к каждому клиенту индивидуальный подход</h3>
+                    </div>
+                </div>
+            </section>
+            <section class="condition" id="схема">
+                <h2 class="condition__title title-topic">Cхема работы</h2>
+                <div class="condition__body">
+                    <div class="condition__item condition__item_decor">
+                        <p class="condition__text services-text">1. Согласие с пользовательским
+                            <strong>соглашением.</strong></p>
+                    </div>
+                    <div class="condition__item condition__item_decor">
+                        <p class="condition__text services-text">2. Перевод денег на счет <strong>компании.</strong></p>
+                    </div>
+                    <div class="condition__item condition__item_decor">
+                        <p class="condition__text services-text">3. Ожидание выплат с <strong>доходом.</strong></p>
+                    </div>
+                </div>
+            </section>
+            <section class="guide">
+                <h2 class="guide__title title-topic">Руководители</h2>
+                <div class="guide__body">
+                    <div class="team">
+                        <figure class="team__item">
+                            <h3 class="team__title services__subtitle">Главный руководитель.</h3>
+                            <p class="team__text services-text">Сава Маркин</p>
+                            <div class="team__body-img">
+                                <img class="team__img" src="./image/user__1.png" alt="картинка">
+                            </div>
+                        </figure>
+                        <figure class="team__item">
+                            <h3 class="team__title services__subtitle">Программист.</h3>
+                            <p class="team__text services-text">Мангушев Сергей</p>
+                            <div class="team__body-img">
+                                <img class="team__img" src="./image/user__2.png" alt="картинка">
+                            </div>
+                        </figure>
+                        <figure class="team__item">
+                            <h3 class="team__title services__subtitle">Test.</h3>
+                            <p class="team__text services-text">Test Variant</p>
+                            <div class="team__body-img">
+                                <img class="team__img" src="./image/user__3.png" alt="картинка">
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="wrapper wrapper_fon-page">
+            <section class="company" id='компания'>
+                <h2 class="number">03</h2>
+                <h2 class="company__title title-topic">о нас</h2>
+                <div class="company__inner">
+                    <p class="company__text services-text">Далеко-далеко за словесными горами в стране гласных и
+                        согласных
+                        живут рыбные тексты. Рукописи что о букв, взобравшись там заголовок предложения ему большой это
+                        речью страну языком обеспечивает рыбного курсивных, наш страна предупреждал осталось но
+                        реторический
+                        однажды! Решила агентство о предупреждал парадигматическая проектах жизни оксмокс правилами
+                        дорогу
+                        если все буквоград своих бросил наш, использовало продолжил! Лучше первую маленькая
+                        парадигматическая буквенных? Города свое от всех великий выйти? Текст повстречался, собрал
+                        заголовок
+                        пор рыбного дал рыбными напоивший решила, правилами переулка путь свой сбить до ручеек скатился
+                        точках то вскоре коварных города необходимыми единственное домах, грустный заглавных продолжил?
+                        Обеспечивает продолжил ведущими свой залетают приставка оксмокс, все предложения?</p>
+                    <p class="company__text services-text">Далеко-далеко за словесными горами в стране гласных и
+                        согласных
+                        живут рыбные тексты. Рукописи что о букв, взобравшись там заголовок предложения ему большой это
+                        речью страну языком обеспечивает рыбного курсивных, наш страна предупреждал осталось но
+                        реторический
+                        однажды! Решила агентство о предупреждал парадигматическая проектах жизни оксмокс правилами
+                        дорогу
+                        если все буквоград своих бросил наш, использовало продолжил! Лучше первую маленькая
+                        парадигматическая буквенных? Города свое от всех великий выйти? Текст повстречался, собрал
+                        заголовок
+                        пор рыбного дал рыбными напоивший решила, правилами переулка путь свой сбить до ручеек скатился
+                        точках то вскоре коварных города необходимыми единственное домах, грустный заглавных продолжил?
+                        Обеспечивает продолжил ведущими свой залетают приставка оксмокс, все предложения?</p>
+                </div>
+            </section>
+            <section class="reviews" id="отзывы">
+                <h2 class="reviews__title title-topic">отзывы наших клиентов</h2>
+                <div class="reviews__slider">
+                    <div class="reviews__slider-comment">
+                        <div class="reviews__slider-item">
+                            <div class="inner-slider">
+                                <h2 class="number number_none">01</h2>
+                                <h3 class="reviews__slider-title reviews__slider-title_decor">дмитрий шапкин</h3>
+                                <h4 class="reviews__slider-subtitle">отзыв</h4>
+                                <p class="reviews__slider-text services-text">Далеко-далеко за словесными горами в
+                                    стране гласных и
+                                    согласных
+                                    живут рыбные тексты. Не ее возвращайся снова даже продолжил, деревни собрал вдали
+                                    моей
+                                    переулка путь реторический всемогущая рекламных осталось, инициал великий текст!
+                                    Свое?
+                                </p>
+                                <p class="reviews__slider-text services-text">Далеко-далеко за словесными горами в
+                                    стране гласных и
+                                    согласных
+                                    живут рыбные тексты. Не ее возвращайся снова даже продолжил, деревни собрал вдали
+                                    моей
+                                    переулка путь реторический всемогущая рекламных осталось, инициал великий текст!
+                                    Свое?
+                                </p>
+                            </div>
+                            <img class="reviews__slider-img" src="./image/use-sliderr__1.png" alt="картинка">
+                        </div>
+                        <div class="reviews__slider-item">
+                            <div class="inner-slider">
+                                <h2 class="number number_none">02</h2>
+                                <h3 class="reviews__slider-title reviews__slider-title_decor">дима карновалов</h3>
+                                <h4 class="reviews__slider-subtitle">отзыв</h4>
+                                <p class="reviews__slider-text services-text">
+                                    Не ее возвращайся снова даже продолжил, деревни собрал вдали моей
+                                    переулка путь реторический всемогущая рекламных осталось, инициал великий текст!
+                                    Свое?
+                                </p>
+                                <p class="reviews__slider-text services-text">Не ее возвращайся снова даже продолжил,
+                                    деревни собрал вдали моей
+                                    переулка путь реторический всемогущая рекламных осталось, инициал великий текст!
+                                    Свое?
+                                </p>
+                            </div>
+                            <img class="reviews__slider-img" src="./image/use-sliderr__2.png" alt="картинка">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class='support'>
+                <h2 class="support-title title-topic">остались вопросы</h2>
+                <div class="support__list">
+                    <div class="support__item">
+                        <a class="support__item-link" href="https://vk.com/im?peers=210807097_c76">
+                            <div class="support__img-hidden">
+                                <img class="support__img" src="./image/support__1.jpg" alt="картинка">
+                                <div class="support__content">
+                                    <h3 class="support__subtitle">Не нашел нужного вопроса.</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="support__item">
+                        <a class="support__item-link" href="https://vk.com/im?peers=210807097_c76">
+                            <div class="support__img-hidden">
+                                <img class="support__img" src="./image/support__2.jpg" alt="картинка">
+                                <div class="support__content">
+                                    <h3 class="support__subtitle">Не могу оплатить.</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="support__item">
+                        <a class="support__item-link" href="https://vk.com/im?peers=210807097_c76">
+                            <div class="support__img-hidden">
+                                <img class="support__img" src="./image/support__3.jpg" alt="картинка">
+                                <div class="support__content">
+                                    <h3 class="support__subtitle">Не могу оставить комментарий.</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="support__item">
+                        <a class="support__item-link" href="https://vk.com/im?peers=210807097_c76">
+                            <div class="support__img-hidden">
+                                <img class="support__img" src="./image/support__4.jpg" alt="картинка">
+                                <div class="support__content">
+                                    <h3 class="support__subtitle">Не получил деньги.</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="support__item">
+                        <a class="support__item-link" href="https://vk.com/im?peers=210807097_c76">
+                            <div class="support__img-hidden">
+                                <img class="support__img" src="./image/support__1.jpg" alt="картинка">
+                                <div class="support__content">
+                                    <h3 class="support__subtitle">Не нашел нужного вопроса.</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="support__item">
+                        <a class="support__item-link" href="https://vk.com/im?peers=210807097_c76">
+                            <div class="support__img-hidden">
+                                <img class="support__img" src="./image/support__1.jpg" alt="картинка">
+                                <div class="support__content">
+                                    <h3 class="support__subtitle">Не нашел нужного вопроса.</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dicta maiores nostrum culpa voluptatem
+            consequatur voluptatibus facilis tenetur fuga at quae repudiandae optio non libero rerum, corporis
+            exercitationem iste incidunt deleniti, impedit earum animi, officia totam temporibus. Obcaecati, sequi
+            corporis, quia totam aut labore, deserunt optio laboriosam eaque atque error? Non, necessitatibus alias?
+            Est, dolorum nobis. Reprehenderit obcaecati atque velit eius repellendus praesentium impedit nesciunt.
+            Fugiat repellat veniam, molestias optio laborum ipsum dignissimos ducimus pariatur atque, omnis a
+            voluptatibus itaque perspiciatis voluptates. Aperiam illo quos molestias dicta delectus deleniti
+            consequuntur est? Tenetur in porro cum ex est, iusto repellat voluptate modi a voluptatibus hic aut labore
+            omnis obcaecati. Quidem sed excepturi a aliquam soluta delectus sapiente doloribus, aspernatur officiis
+            cupiditate eum quos repellat voluptates dolores illum nihil est dolorum sequi, quaerat suscipit corporis
+            amet fugiat. Nihil aliquam laborum laboriosam molestias sunt autem! Quam laudantium vitae distinctio, a
+            delectus rem doloribus voluptatibus magni reprehenderit. At quod assumenda atque numquam similique iste
+            possimus veritatis ratione maiores provident facere sed perspiciatis natus porro rem debitis accusantium
+            repellendus veniam modi error quas reprehenderit, aspernatur nesciunt? Odit quisquam cum quibusdam quas,
+            ipsam, velit eum numquam error id reiciendis quod! Quo ratione tempora aliquid mollitia voluptatem fugiat
+            eius laboriosam blanditiis quaerat nam, error iure. Error velit quas iusto debitis doloribus explicabo!
+            Sequi voluptates illo non numquam incidunt ea, ut qui harum sunt, ullam laboriosam dolor tempore? Omnis
+            officiis quaerat perferendis corrupti velit itaque ipsa ipsam similique placeat natus? Tempora, suscipit
+            veniam. Distinctio inventore quod molestias voluptatibus natus, impedit est exercitationem cum quo at, eius
+            eaque odio non ex sit mollitia ab nostrum ipsam! Odio ullam neque nisi? Beatae accusantium doloribus, quos
+            tenetur quidem illo itaque ducimus unde laborum modi, dolorem voluptatum deleniti atque doloremque eos sit
+            dolore ab, vel harum praesentium! Magnam dolores perspiciatis est minus, maxime nam accusantium numquam
+            expedita rem quia, voluptas earum non maiores fugit adipisci aut, qui aliquid porro. Enim dolores iusto,
+            molestiae explicabo natus adipisci optio sapiente ipsum suscipit aperiam corrupti perspiciatis esse delectus
+            possimus deleniti earum eveniet laboriosam quisquam, ducimus rerum, facere necessitatibus odit? Itaque rem
+            nulla doloremque vero et corporis esse placeat beatae eius. Consequatur cumque quam delectus alias facere
+            deleniti beatae non voluptas, repellat eius error voluptatibus voluptate blanditiis. Enim harum ipsa ipsum
+            libero. Quae dicta aliquam ipsum. Necessitatibus cupiditate corporis sint quo excepturi voluptates ipsum
+            sunt incidunt totam? Aperiam animi nemo qui suscipit incidunt quisquam ratione a reiciendis, doloribus
+            eveniet mollitia. Eaque amet culpa voluptatem rerum doloribus repellat enim quam provident veritatis iusto
+            nostrum, error hic nobis ducimus quis quibusdam consectetur nihil impedit alias cupiditate necessitatibus
+            magni! Id voluptatibus nam cumque laboriosam, nulla, magnam similique dignissimos eaque nesciunt, esse
+            nostrum ipsa pariatur perspiciatis cum iste sunt necessitatibus ducimus quod. Eum sunt aperiam soluta
+            corporis ex, numquam dolor repellendus officiis, quos hic, natus illo accusamus praesentium. Laboriosam
+            corporis doloribus rem soluta pariatur, a ex exercitationem saepe in deleniti excepturi architecto ab
+            molestias, repellendus ducimus provident doloremque. Ratione consequatur vero asperiores, ea eos dolore
+            placeat quaerat fuga veniam quibusdam!</p>
+    </main>
+    <footer class="page-footer">
+        <h3 class="version-check">v 0.65 beta</h3>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/script.min.js"></script>
+</body>
+
+</html>
